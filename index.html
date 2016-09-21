@@ -16,7 +16,7 @@
   function getAdjective() {
     var app = angular.module('myApp', []);
     app.controller('myCtrl', function($scope, $http) {
-        $http.get("http://localhost/data")
+        $http.get("/data")
         .then(function(response) {
             $scope.myWelcome = response.data["adjective"];
         });
